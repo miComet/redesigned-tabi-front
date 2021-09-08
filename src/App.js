@@ -3,7 +3,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Header from "./components/Header";
-import BasicInfoLength from "./components/Basic-info-length";
+import BasicInfoLength from "./components/BasicInfo/BasicInfoLength";
 import "./App.css";
 
 function App() {

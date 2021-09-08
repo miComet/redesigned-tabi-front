@@ -5,15 +5,12 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { teal, cyan } from "@mui/material/colors";
+import { deepPurple } from "@mui/material/colors";
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: "#018786",
-        },
-        secondary: {
-            main: cyan[300],
+            main: deepPurple[500],
         },
     },
 });
@@ -24,13 +21,21 @@ const Header = () => {
         <>
             <ThemeProvider theme={theme}>
                 <AppBar position="static">
-                    <Toolbar variant="dense">
+                    <Toolbar
+                        variant="dense"
+                        sx={{
+                            height: "93px",
+                        }}
+                    >
                         <Typography
-                            variant="h5"
                             component="div"
                             sx={{
                                 flexGrow: 1,
-                                pl: 10,
+                                paddingX: "140px",
+                                paddingY: "19px",
+                                fontSize: "53px",
+                                textAlign: "center",
+                                position: "absolute",
                             }}
                         >
                             Redesigned-Tabi
