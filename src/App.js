@@ -12,7 +12,7 @@ function App() {
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route path="/Basic-info-length" component={BasicInfoLength} />
+                <Route path="/BasicInfoLength" component={BasicInfoLength} />
                 {/* <Route path="/courses" component={CoursesPage} /> */}
                 {/* <Route component={PageNotFound} /> */}
             </Switch>
