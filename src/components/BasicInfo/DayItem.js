@@ -7,7 +7,8 @@ export default function DayItem() {
     return (
         <Box
             sx={{
-                m: 2,
+                display: "flex",
+                justifyContent: "center",
             }}
         >
             <Button
@@ -24,8 +25,7 @@ export default function DayItem() {
                     "&:hover": {
                         backgroundColor: deepPurple[800],
                     },
-                    m: 2,
-                    left: "33%",
+                    m: "3rem",
                 }}
             >
                 1
@@ -44,11 +44,10 @@ export default function DayItem() {
                     "&:hover": {
                         backgroundColor: deepPurple[400],
                     },
-                    m: 2,
-                    left: "44%",
+                    m: "3rem",
                 }}
             >
-                2
+                3
             </Button>
             <Button
                 variant="contained"
@@ -64,11 +63,10 @@ export default function DayItem() {
                     "&:hover": {
                         backgroundColor: deepPurple[200],
                     },
-                    m: 2,
-                    left: "55%",
+                    m: "3rem",
                 }}
             >
-                3
+                7
             </Button>
         </Box>
     );

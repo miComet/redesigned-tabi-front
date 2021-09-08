@@ -16,11 +16,8 @@ const BasicInfoLength = () => {
         <Typography component="div">
             <Box
                 sx={{
-                    color: "#018786",
-                    width: "923px",
-                    height: "116px",
-                    ml: "499px",
-                    mt: "286px",
+                    color: "#6200EE",
+                    m: "143px",
                     fontWeight: "bold",
                     fontFamily: "Montserrat, sans-serif",
                     whiteSpace: "nowrap",
