@@ -10,7 +10,7 @@ import { deepPurple } from "@mui/material/colors";
 const theme = createTheme({
     palette: {
         primary: {
-            main: deepPurple[500],
+            main: "#6200EE",
         },
     },
 });
@@ -24,16 +24,16 @@ const Header = () => {
                     <Toolbar
                         variant="dense"
                         sx={{
-                            height: "93px",
+                            height: "4rem",
                         }}
                     >
                         <Typography
                             component="div"
                             sx={{
                                 flexGrow: 1,
-                                paddingX: "140px",
+                                paddingX: "8rem",
                                 paddingY: "19px",
-                                fontSize: "53px",
+                                fontSize: "2rem",
                                 textAlign: "center",
                                 position: "absolute",
                             }}

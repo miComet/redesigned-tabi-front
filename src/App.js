@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
     return (
-        <div className="container-fluid">
+        <>
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />
@@ -16,7 +16,7 @@ function App() {
                 {/* <Route path="/courses" component={CoursesPage} /> */}
                 {/* <Route component={PageNotFound} /> */}
             </Switch>
-        </div>
+        </>
     );
 }
 
