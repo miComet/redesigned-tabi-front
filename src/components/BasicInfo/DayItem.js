@@ -1,73 +1,49 @@
 import React from "react";
-import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { deepPurple } from "@mui/material/colors";
+import { getThemeProps } from "@mui/system";
+import { popoverClasses } from "@mui/material";
 
-export default function DayItem() {
+export default function DayItem({ day, onClick, history }) {
+    let backgroundColor =
+        day === 1
+            ? deepPurple[900]
+            : day === 3
+            ? deepPurple[500]
+            : day === 7
+            ? deepPurple[100]
+            : "#fff";
+    let hoverBackgroundColor =
+        day === 1
+            ? deepPurple[800]
+            : day === 3
+            ? deepPurple[400]
+            : day === 7
+            ? deepPurple[200]
+            : "#fff";
+
     return (
-        <Box
+        <Button
+            component={Link}
+            to="/BasicInfoOrigin"
+            variant="contained"
+            size="large"
             sx={{
-                display: "flex",
-                justifyContent: "center",
+                borderRadius: 50,
+                height: "10rem",
+                width: "10rem",
+                fontSize: "3rem",
+                fontWeight: "bold",
+                color: "white",
+                backgroundColor: backgroundColor,
+                "&:hover": {
+                    backgroundColor: hoverBackgroundColor,
+                },
+                m: "3rem",
             }}
         >
-            <Button
-                variant="contained"
-                size="large"
-                sx={{
-                    borderRadius: 50,
-                    height: "10rem",
-                    width: "10rem",
-                    fontSize: "3rem",
-                    fontWeight: "bold",
-                    color: "white",
-                    backgroundColor: deepPurple[900],
-                    "&:hover": {
-                        backgroundColor: deepPurple[800],
-                    },
-                    m: "3rem",
-                }}
-            >
-                1
-            </Button>
-            <Button
-                variant="contained"
-                size="large"
-                sx={{
-                    borderRadius: 50,
-                    height: "10rem",
-                    width: "10rem",
-                    fontSize: "3rem",
-                    fontWeight: "bold",
-                    color: "white",
-                    backgroundColor: deepPurple[500],
-                    "&:hover": {
-                        backgroundColor: deepPurple[400],
-                    },
-                    m: "3rem",
-                }}
-            >
-                3
-            </Button>
-            <Button
-                variant="contained"
-                size="large"
-                sx={{
-                    borderRadius: 50,
-                    height: "10rem",
-                    width: "10rem",
-                    fontSize: "3rem",
-                    fontWeight: "bold",
-                    color: "white",
-                    backgroundColor: deepPurple[100],
-                    "&:hover": {
-                        backgroundColor: deepPurple[200],
-                    },
-                    m: "3rem",
-                }}
-            >
-                7
-            </Button>
-        </Box>
+            {day}
+        </Button>
     );
 }

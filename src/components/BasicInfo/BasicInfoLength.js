@@ -27,9 +27,17 @@ const BasicInfoLength = () => {
             >
                 How many days do you tabi?
             </Box>
-            <Link to="/BasicInfoOrigin" style={{ textDecoration: "none" }}>
-                <DayItem onClick={setTrip} />
-            </Link>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "row",
+                }}
+            >
+                {[1, 3, 7].map((day) => (
+                    <DayItem key={day} day={day} onClick={setTrip} />
+                ))}
+            </Box>
         </Typography>
     );
 };
