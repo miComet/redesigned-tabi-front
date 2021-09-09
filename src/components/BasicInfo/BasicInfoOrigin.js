@@ -2,16 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import DayItem from "./DayItem";
 
-const TripLength = (props) => (
-    <Link className="Trip" onClick={() => props.onClick(props.number)}>
-        {props.number}
-    </Link>
-);
-
-const BasicInfoLength = () => {
-    const [trip, setTrip] = useState(1);
+const BasicInfoOrigin = () => {
     return (
         <Typography component="div">
             <Box
@@ -25,13 +17,10 @@ const BasicInfoLength = () => {
                     textAlign: "center",
                 }}
             >
-                How many days do you tabi?
+                Where do you start?
             </Box>
-            <Link to="/BasicInfoOrigin" style={{ textDecoration: "none" }}>
-                <DayItem onClick={setTrip} />
-            </Link>
         </Typography>
     );
 };
 
-export default BasicInfoLength;
+export default BasicInfoOrigin;
