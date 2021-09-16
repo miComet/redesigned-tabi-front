@@ -6,77 +6,48 @@ import Button from "@mui/material/Button";
 import { deepPurple } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 
-const HomePage = () => (
-    <Box
-        sx={{ height: "100rem" }}
-        style={{
-            backgroundImage: `url("img/ElementsImage.png")`,
-            backgroundSize: "40%",
-            backgroundPosition: "center 5%",
-            backgroundRepeat: "no-repeat",
-            position: "relative",
-        }}
-    >
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "center",
-            }}
-        >
-            <Typography
-                sx={{
-                    color: "#6200EE",
-                    mt: "13rem",
-                    mb: "6rem",
-                    fontWeight: "bold",
-                    fontFamily: "Montserrat, sans-serif",
-                    whiteSpace: "nowrap",
-                    fontSize: "4.5rem",
-                }}
-            >
-                Redesigned-Tabi
-            </Typography>
-            <ImageSrc />
-        </Box>
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "center",
-            }}
-        >
-            <Link to="/BasicInfoLength" style={{ textDecoration: "none" }}>
-                <Button
-                    size="large"
-                    sx={{
-                        borderRadius: 50,
-                        width: "25rem",
-                        height: "5rem",
-                        fontSize: "3rem",
-                        fontWeight: "bold",
-                        color: "white",
-                        backgroundColor: "#6200EE",
-                        textTransform: "none",
-                        "&:hover": {
-                            backgroundColor: deepPurple[800],
-                        },
-                    }}
-                >
-                    Start
-                </Button>
-            </Link>
-        </Box>
-    </Box>
-);
+const HomePage = () => {
+    const contentStyle = {
+        // top: "93px",
+        // left: "0px",
+        width: "1920px",
+        height: "987px",
+    };
 
-const ImageSrc = styled("span")({
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-});
+    const pictureStyle = {
+        top: "92px",
+        left: "564px",
+        width: "793px",
+        height: "793px",
+        position: "relative",
+        backgroundImage: `url("img/ElementsImage.png")`,
+    };
+
+    const titleStyle = {
+        color: "#6200EE",
+        top: "158px",
+        left: "31px",
+        width: "730px",
+        height: "244px",
+        textAlign: "center",
+        fontSize: "105px",
+        position: "relative",
+        fontFamily: "Arial",
+        fontWeight: "bold",
+        whiteSpace: "nowrap",
+    };
+
+    const buttonStyle = {};
+
+    return (
+        <>
+            <div style={contentStyle}>
+                <div style={pictureStyle}>
+                    <div style={titleStyle}>Redesigned-Tabi</div>
+                </div>
+            </div>
+        </>
+    );
+};
 
 export default HomePage;
