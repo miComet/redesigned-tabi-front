@@ -1,10 +1,8 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import { deepPurple } from "@mui/material/colors";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+const Button = () => {
+    return <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} />;
+};
 
 const HomePage = () => {
     const contentStyle = {
@@ -30,20 +28,41 @@ const HomePage = () => {
         width: "730px",
         height: "244px",
         textAlign: "center",
-        fontSize: "105px",
-        position: "relative",
+        fontSize: "90px",
+        position: "absolute",
         fontFamily: "Arial",
         fontWeight: "bold",
         whiteSpace: "nowrap",
     };
 
-    const buttonStyle = {};
+    const buttonStyle = {
+        color: "white",
+        top: "439px",
+        left: "147px",
+        width: "499px",
+        height: "111px",
+        // textAlign: "center",
+        fontSize: "70px",
+        position: "absolute",
+        backgroundColor: "#6200EE",
+        borderRadius: 500,
+        cursor: "pointer",
+        opacity: "0.9",
+    };
 
     return (
         <>
             <div style={contentStyle}>
                 <div style={pictureStyle}>
                     <div style={titleStyle}>Redesigned-Tabi</div>
+
+                    <motion.button
+                        style={buttonStyle}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 1.0 }}
+                    >
+                        Start
+                    </motion.button>
                 </div>
             </div>
         </>
