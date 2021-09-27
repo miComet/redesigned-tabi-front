@@ -1,9 +1,10 @@
 name: Deploy frontend to test env on aws
 
 on:
+  workflow_dispatch:
   push:
     branches:
-    - master
+    - main
 jobs:
   deploy-test-env:
     name: deploy-test-env
