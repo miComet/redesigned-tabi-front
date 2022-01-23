@@ -1,0 +1,39 @@
+name: Deploy frontend to test env on aws
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+jobs:
+  deploy-test-env:
+    name: deploy-test-env
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: install venv
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.6.10'
+    - name: Get req & pem & tfvar & sql file
+      uses: chrislennon/action-aws-cli@v1.1
+    - run: |
+        aws s3 cp s3://deployment-cfg/t_backend.pem .
+      env:
+        AWS_ACCESS_KEY_ID:     ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Do deploy
+      run: |
+        cat t_backend.pem
+        chmod 600 t_backend.pem
+        ssh -i t_backend.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ubuntu@${{ secrets.TESTENVHOST }} <<-EOT
+            cd redesigned-tabi-front
+            git pull
+            docker-compose down
+            docker-compose up -d
+        EOT
+
