@@ -6,7 +6,7 @@ const Header = () => {
       <div className="flex items-center space-x-10 text-sky-500">
         <Link href="/">
           <img
-            className="w-44 object-contain cursor-pointer"
+            className="w-28 object-contain cursor-pointer"
             src="tabi_logo.png"
             alt="logo"
           />
