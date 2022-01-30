@@ -11,13 +11,15 @@ const Header = () => {
             alt="logo"
           />
         </Link>
-        <h3>Features</h3>
-        <h3>Community</h3>
-        <h3>Support</h3>
+        <h3 className="cursor-pointer">Features</h3>
+        <h3 className="cursor-pointer">Community</h3>
+        <h3 className="cursor-pointer">Support</h3>
       </div>
       <div className="flex items-center space-x-2 text-sky-500">
-        <h3 className="border rounded-lg border-sky-500 px-9 py-1.5">Log in</h3>
-        <h3 className="border rounded-lg px-8 py-1.5 bg-sky-500 text-white">
+        <h3 className="border rounded-lg border-sky-500 px-9 py-1.5 cursor-pointer">
+          Log in
+        </h3>
+        <h3 className="border rounded-lg px-8 py-1.5 bg-sky-500 text-white cursor-pointer">
           Register
         </h3>
       </div>
