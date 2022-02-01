@@ -73,6 +73,19 @@ const Banner = () => {
           />
         </div>
       </div>
+
+      <div className="flex m-10 items-center justify-center space-x-4">
+        <p className="text-xl mb-3 w-3/5 p-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore
+        </p>
+        <h3
+          className="border rounded-md h-10 px-8 py-1.5 
+        bg-sky-500 text-white cursor-pointer whitespace-nowrap"
+        >
+          Join Today
+        </h3>
+      </div>
     </div>
   );
 };
