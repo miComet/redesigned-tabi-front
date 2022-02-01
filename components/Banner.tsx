@@ -51,7 +51,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row my-5">
+      <div className="flex flex-col lg:flex-row my-5 bg-gray-100">
         <div className="flex flex-col flex-1 p-5 lg:justify-center">
           <h1 className="text-4xl mb-3 w-128">
             Sed ut perspiciatis unde omnis
