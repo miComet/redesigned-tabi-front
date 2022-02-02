@@ -16,7 +16,10 @@ const Header = () => {
         <h3 className="cursor-pointer">Support</h3>
       </div>
       <div className="flex items-center space-x-2 text-sky-500">
-        <h3 className="border rounded-lg border-sky-500 px-9 py-1.5 cursor-pointer">
+        <h3
+          className="border rounded-lg border-sky-500 px-9 py-1.5 
+          whitespace-nowrap cursor-pointer"
+        >
           Log in
         </h3>
         <h3 className="border rounded-lg px-8 py-1.5 bg-sky-500 text-white cursor-pointer">

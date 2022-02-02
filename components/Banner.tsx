@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { PlayIcon } from "@heroicons/react/solid";
+import { useRouter } from "next/router";
 
 const Banner = () => {
+  const router = useRouter();
+
   return (
     <div>
       <div className="relative h-screen">
@@ -20,6 +23,7 @@ const Banner = () => {
           <p className="text-xl sm:text-5xl">Your Personal Tabi Adviser</p>
 
           <button
+            onClick={() => router.push("/info")}
             className="px-12 py-2 shadow-md rounded-lg text-white 
           bg-sky-500  my-3 hover:shadow-xl active:scale-90 text-sm
           transition duration-150"
