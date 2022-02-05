@@ -11,7 +11,7 @@ const Info = () => {
       <Header />
       {info === 0 && <Userinfo setInfo={setInfo} />}
       {/* <Userinfo /> */}
-      {info === 1 && <PictureSelect setInfo={setInfo} />}
+      {info === 1 && <PictureSelect />}
       {/* <PictureSelect /> */}
       <Footer />
     </div>
