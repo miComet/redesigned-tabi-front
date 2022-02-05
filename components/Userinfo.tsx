@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { FC } from "react";
 
-const Userinfo = () => {
+type Props = {
+  setInfo: (val: number) => void;
+};
+
+const Userinfo: FC<Props> = ({ setInfo }) => {
   return (
     <div className="flex flex-col items-center justify-center mx-auto -ml-24">
       <div>
@@ -86,7 +91,10 @@ const Userinfo = () => {
         </div>
       </div>
 
-      <h3 className="border rounded-lg px-8 ml-24 py-1.5 bg-sky-500 text-white cursor-pointer">
+      <h3
+        onClick={() => setInfo(1)}
+        className="border rounded-lg px-8 ml-24 py-1.5 bg-sky-500 text-white cursor-pointer"
+      >
         Submit
       </h3>
     </div>
