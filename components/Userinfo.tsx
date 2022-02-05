@@ -2,12 +2,16 @@ import Image from "next/image";
 import { FC } from "react";
 
 type Props = {
+  info: number;
   setInfo: (val: number) => void;
 };
 
-const Userinfo: FC<Props> = ({ setInfo }) => {
+const Userinfo: FC<Props> = ({ info, setInfo }) => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto -ml-24">
+    <div
+      className="flex flex-col items-center justify-center mx-auto -ml-24
+        animate-fade-in-right"
+    >
       <div>
         <h1 className="text-3xl font-bold p-10 -ml-16">
           About You and Your Next Tabi

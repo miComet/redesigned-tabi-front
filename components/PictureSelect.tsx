@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const PictureSelect = () => {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto -ml-24">
+    <div
+      className="flex flex-col items-center justify-center mx-auto -ml-24
+        animate-fade-in-right"
+    >
       <div className="flex flex-col m-4 ml-20">
         <h1 className="text-xl font-bold -ml-16 p-8">
           Choose Your Favorite One
