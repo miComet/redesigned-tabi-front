@@ -11,7 +11,7 @@ const PictureSelect = () => {
           Choose Your Favorite One
         </h1>
         <div className="grid grid-flow-row grid-cols-2 grid-rows-2">
-          <div className="relative h-48 w-48 mx-3 my-2">
+          <div className="relative h-48 w-48 mx-3 my-2 hover:scale-95 cursor-pointer transition-all ease-in-out duration-200">
             <Image
               className="rounded-lg"
               src="/banner.jpg"
@@ -23,7 +23,7 @@ const PictureSelect = () => {
               rounded-b-lg opacity-90"
             ></div>
           </div>
-          <div className="relative h-48 w-48 mx-3 my-2">
+          <div className="relative h-48 w-48 mx-3 my-2 hover:scale-95 cursor-pointer transition-all ease-in-out duration-200">
             <Image
               className="rounded-lg"
               src="/banner.jpg"
@@ -35,7 +35,7 @@ const PictureSelect = () => {
               rounded-b-lg opacity-90"
             ></div>
           </div>
-          <div className="relative h-48 w-48 mx-3 my-2">
+          <div className="relative h-48 w-48 mx-3 my-2 hover:scale-95 cursor-pointer transition-all ease-in-out duration-200">
             <Image
               className="rounded-lg"
               src="/banner.jpg"
@@ -47,7 +47,7 @@ const PictureSelect = () => {
               rounded-b-lg opacity-90"
             ></div>
           </div>
-          <div className="relative h-48 w-48 mx-3 my-2">
+          <div className="relative h-48 w-48 mx-3 my-2 hover:scale-95 cursor-pointer transition-all ease-in-out duration-200">
             <Image
               className="rounded-lg"
               src="/banner.jpg"
@@ -62,7 +62,10 @@ const PictureSelect = () => {
         </div>
       </div>
 
-      <h3 className="border rounded-lg px-8 ml-16 py-1.5 text-sky-500 border-sky-500 cursor-pointer">
+      <h3
+        className="border rounded-lg px-8 ml-16 py-1.5 text-sky-500 border-sky-500 cursor-pointer
+        hover:scale-105 transform transition duration-300 ease-out"
+      >
         Shuffle
       </h3>
     </div>

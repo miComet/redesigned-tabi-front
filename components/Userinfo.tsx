@@ -2,11 +2,10 @@ import Image from "next/image";
 import { FC } from "react";
 
 type Props = {
-  info: number;
   setInfo: (val: number) => void;
 };
 
-const Userinfo: FC<Props> = ({ info, setInfo }) => {
+const Userinfo: FC<Props> = ({ setInfo }) => {
   return (
     <div
       className="flex flex-col items-center justify-center mx-auto -ml-24
@@ -52,9 +51,9 @@ const Userinfo: FC<Props> = ({ info, setInfo }) => {
       <div className="flex m-4 ml-20">
         <h1 className="text-xl font-bold -ml-10 pr-4">Tabi Season</h1>
         <div className="grid grid-flow-row grid-cols-2 grid-rows-2">
-          <div className="px-2 py-1">
+          <div className="px-2 py-1 rounded-lg">
             <Image
-              className="rounded-lg"
+              className="rounded-lg hover:scale-95 cursor-pointer transition-all ease-in-out duration-200"
               src="/banner.jpg"
               layout="fixed"
               objectFit="fill"
@@ -64,7 +63,7 @@ const Userinfo: FC<Props> = ({ info, setInfo }) => {
           </div>
           <div className="px-2 py-1">
             <Image
-              className="rounded-lg"
+              className="rounded-lg hover:scale-95 cursor-pointer transition-all ease-in-out duration-200"
               src="/banner.jpg"
               layout="fixed"
               objectFit="fill"
@@ -74,7 +73,7 @@ const Userinfo: FC<Props> = ({ info, setInfo }) => {
           </div>
           <div className="px-2 py-1">
             <Image
-              className="rounded-lg"
+              className="rounded-lg hover:scale-95 cursor-pointer transition-all ease-in-out duration-200"
               src="/banner.jpg"
               layout="fixed"
               objectFit="fill"
@@ -84,7 +83,7 @@ const Userinfo: FC<Props> = ({ info, setInfo }) => {
           </div>
           <div className="px-2 py-1">
             <Image
-              className="rounded-lg"
+              className="rounded-lg hover:scale-95 cursor-pointer transition-all ease-in-out duration-200"
               src="/banner.jpg"
               layout="fixed"
               objectFit="fill"
@@ -97,7 +96,8 @@ const Userinfo: FC<Props> = ({ info, setInfo }) => {
 
       <h3
         onClick={() => setInfo(1)}
-        className="border rounded-lg px-8 ml-24 py-1.5 bg-sky-500 text-white cursor-pointer"
+        className="border rounded-lg px-8 ml-24 py-1.5 bg-sky-500 text-white cursor-pointer 
+        hover:scale-105 transform transition duration-300 ease-out"
       >
         Submit
       </h3>
