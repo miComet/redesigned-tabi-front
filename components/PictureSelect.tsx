@@ -3,15 +3,32 @@ import { Transition } from "@headlessui/react";
 import { useTimeoutFn } from "react-use";
 import { useRouter } from "next/router";
 import { Spot } from "../typings";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 interface Props {
   pictureResults: Spot[];
 }
 const PictureSelect = ({ pictureResults }: Props) => {
   console.log(pictureResults);
+  const [userinfoPic, setUserinfoPic] = useState<object[]>([]);
+  console.log(userinfoPic);
+
   const router = useRouter();
   const [isShowing, setIsShowing] = useState(true);
   const [, , resetIsShowing] = useTimeoutFn(() => setIsShowing(true), 500);
+
+  const handlePicClick = (e: React.MouseEvent<HTMLInputElement>) => {
+    const pic = e.currentTarget.id;
+    setUserinfoPic([...userinfoPic, { pic }]);
+    setIsShowing(false);
+    resetIsShowing();
+    router.push("/info");
+  };
+
+  useEffect(() => {
+    if (userinfoPic.length === 5) {
+      router.push("/recommendation");
+    }
+  }, [userinfoPic]);
   return (
     <div
       className="flex flex-col items-center justify-center mx-auto -ml-24
@@ -24,6 +41,7 @@ const PictureSelect = ({ pictureResults }: Props) => {
         <div className="grid grid-flow-row grid-cols-2 grid-rows-2">
           {pictureResults.map((picture) => (
             <div
+              onClick={handlePicClick}
               id={picture.image_url}
               className="relative h-48 w-48 mx-3 my-2 hover:scale-95 cursor-pointer transition-all ease-in-out duration-200"
             >
