@@ -34,13 +34,13 @@ const Recommendation = () => {
         <div className="flex items-center space-x-2 ml-24">
           <h3
             className="border rounded-lg px-12 py-1.5 
-          bg-sky-500 text-white cursor-pointer"
+          bg-sky-500 text-white cursor-pointer hover:scale-105 transform transition duration-100 ease-out"
           >
             Save
           </h3>
           <h3
             className="border rounded-lg px-12 py-1.5 text-sky-500 border-sky-500 cursor-pointer
-          hover:scale-105 transform transition duration-300 ease-out w-34"
+          hover:scale-105 transform transition duration-100 ease-out"
           >
             Redo
           </h3>
